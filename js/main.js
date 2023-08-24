@@ -59,3 +59,12 @@ const teamMembers = [
     foto: "barbara-ramos-graphic-designer.jpg",
   },
 ];
+
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
+for (const member of teamMembers) {
+  console.log("Nome:", member.nome);
+  console.log("Ruolo:", member.ruolo);
+  console.log("Foto:", member.foto);
+  console.log("---"); // Separatore tra i membri del team
+}
