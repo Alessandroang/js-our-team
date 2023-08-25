@@ -68,3 +68,21 @@ for (const member of teamMembers) {
   console.log("Foto:", member.foto);
   console.log("---"); // Separatore tra i membri del team
 }
+
+const teamContainer = document.getElementById("team-container");
+
+for (const member of teamMembers) {
+  const cardTemplate = `
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="./img/${member.foto}" class="card-img-top" alt="${member.nome}">
+        <div class="card-body">
+          <h5 class="card-title">${member.nome}</h5>
+          <p class="card-text">${member.ruolo}</p>
+        </div>
+      </div>
+    </div>
+  `;
+
+  teamContainer.innerHTML += cardTemplate;
+}
