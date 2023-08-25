@@ -60,18 +60,19 @@ const teamMembers = [
   },
 ];
 
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+const teamContainer = document.getElementById("team-container");
 
-for (const member of teamMembers) {
+for (let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+
+  // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
   console.log("Nome:", member.nome);
   console.log("Ruolo:", member.ruolo);
   console.log("Foto:", member.foto);
   console.log("---"); // Separatore tra i membri del team
-}
 
-const teamContainer = document.getElementById("team-container");
-
-for (const member of teamMembers) {
+  // Crea la card nel DOM
   const cardTemplate = `
     <div class="col-md-4 mb-4">
       <div class="card">
